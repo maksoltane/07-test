@@ -30,6 +30,7 @@ SystemJS.config({
   ],
   map: {
     'angular': 'npm:angular@1.6.0',
+    'angular-animate': 'npm:angular-animate@1.6.1',
     'assert': 'github:jspm/nodelibs-assert@0.2.0-alpha',
     'buffer': 'github:jspm/nodelibs-buffer@0.2.0-alpha',
     'child_process': 'github:jspm/nodelibs-child_process@0.2.0-alpha',

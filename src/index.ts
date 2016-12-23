@@ -1,13 +1,14 @@
 import * as angular from 'angular';
-import {navbar} from './app/navbar/navbar.component';
-import {main} from './app/main/main.component';
-import {footer} from './app/footer/footer.component';
+import { navbar } from './app/components/navbar/navbar.component';
+import { main } from './app/components/main/main.component';
+import { footer } from './app/components/footer/footer.component';
+import 'angular-animate';
 
 
 angular
     .module('app', [])
     .component('navbar', navbar)
-    .component('app', main)
+    .component('main', main)
     .component('footer', footer);
 
 
