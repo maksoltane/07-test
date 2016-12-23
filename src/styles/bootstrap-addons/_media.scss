@@ -1,0 +1,14 @@
+.media-inline {
+
+   .media-body {
+      width: auto;
+   }
+}
+.media-sm {
+   .media-left {
+      padding-right: $line-height-computed/4;
+   }
+   .media-right {
+      padding-left: $line-height-computed/4;
+   }
+}
