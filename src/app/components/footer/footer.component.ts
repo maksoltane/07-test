@@ -9,7 +9,7 @@ class FooterController {
 }
 
 export const footer = {
-  templateUrl: 'src/app/components/footer/footer.template.html',
+  templateUrl: '/app/components/footer/footer.template.html',
   controller: FooterController
 };
 

@@ -1,32 +1,25 @@
-<nav class="_paint-dawn">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <a ng-href="{{$ctrl.teamboxUrl}}" class="btn btn-xs pull-left small _underline _ink-winter" style="margin-bottom: -7px;"><span class="glyphicon glyphicon-menu-left small"></span>Revenir à Teambox</a>
-      </div>
-    </div>
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Title</a>
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="navbar navbar-inverse _flush">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false">
-	                  <span class="sr-only">Toggle navigation</span>
-	                  <span class="icon-bar"></span>
-	                  <span class="icon-bar"></span>
-	                  <span class="icon-bar"></span>
-	               </button>
-            <a class="navbar-brand" href="/"><img src="images/logo-full.png" alt="Open, logo de la wab-application Plan de Charge" /></a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Equipe <span class="sr-only">(current)</span></a></li>
-              <li class="active"><a href="domaines">Liste des domaines <span class="sr-only"></span></a></li>
-              <li class="active"><a href="collaborateurs">Liste des collaborateurs <span class="sr-only"></span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/domaines">domaines</a></li>
+      <li><a href="/collaborateurs">collaborateurs</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
 </nav>
+
+
+

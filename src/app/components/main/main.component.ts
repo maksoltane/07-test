@@ -1,13 +1,14 @@
-
 class MainController {
-  public data: Array<{}>;
+  public text: string;
 
   constructor() {
-    this.data = [{name: 'test', prenom: 'test'}];
+    this.text = 'My brand new component domaines!';
   }
 }
 
 export const main  = {
-  templateUrl: 'src/app/components/main/main.template.html',
+  templateUrl: '/app/components/main/main.template.html',
   controller: MainController
 };
+
+
