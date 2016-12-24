@@ -1,13 +1,13 @@
 class PlanningController {
-  public data: Array<{}>;
+  public text: string;
 
   constructor() {
-    this.data = [{name: 'test', prenom: 'test'}];
+    this.text = 'My brand new component!';
   }
 }
 
 export const planning = {
-  templateUrl: 'src/app/components/planning.template.html',
+  templateUrl: 'src/app/planning.template.html',
   controller: PlanningController
 };
 
