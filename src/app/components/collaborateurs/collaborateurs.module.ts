@@ -1,2 +1,2 @@
 // define the `domainesListe` module
-angular.module('collaborateursListe', []);
+// angular.module('collaborateursListe', []);

@@ -1,12 +1,12 @@
 class CollaborateursController {
-  public text: string;
+  public text1: string;
 
   constructor() {
-    this.text = 'My brand new component collaborateurs!';
+    this.text1 = 'My brand new component collaborateurs!';
   }
 }
 
 export const collaborateurs = {
-  templateUrl: '/app/components/domaines/domaines.template.html',
-  controller: CollaborateursController
+  templateUrl: '/app/components/collaborateurs/collaborateurs.template.html',
+  controller: CollaborateursController,
 };

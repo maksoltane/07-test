@@ -2,7 +2,7 @@ class DomainesController {
   public text: string;
 
   constructor() {
-    this.text = 'My brand new component domaines!';
+    this.text = 'My brand new component domaines!!';
   }
 }
 
