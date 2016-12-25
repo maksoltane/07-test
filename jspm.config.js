@@ -26,13 +26,15 @@ SystemJS.config({
   packageConfigPaths: [
     'npm:@*/*.json',
     'npm:*.json',
-    'github:*/*.json'
+    'github:*/*.json',
+    'bower:*.json'
   ],
   map: {
     '@types/angular': 'npm:@types/angular@1.5.22',
     '@types/angular-route': 'npm:@types/angular-route@1.3.3',
     'angular': 'github:angular/bower-angular@1.6.1',
     'angular-animate': 'github:angular/bower-angular-animate@1.6.1',
+    'angular-crumble': 'bower:angular-crumble@0.2.2',
     'angular-route': 'github:angular/bower-angular-route@1.6.1',
     'assert': 'github:jspm/nodelibs-assert@0.2.0-alpha',
     'buffer': 'github:jspm/nodelibs-buffer@0.2.0-alpha',
@@ -286,6 +288,17 @@ SystemJS.config({
     'npm:@types/angular@1.5.22': {
       'map': {
         '@types/jquery': 'npm:@types/jquery@2.0.34'
+      }
+    },
+    'bower:angular-crumble@0.2.2': {
+      'map': {
+        'angular': 'bower:angular@1.6.1',
+        'angular-route': 'bower:angular-route@1.6.1'
+      }
+    },
+    'bower:angular-route@1.6.1': {
+      'map': {
+        'angular': 'bower:angular@1.6.1'
       }
     }
   }
