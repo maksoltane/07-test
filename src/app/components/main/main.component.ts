@@ -1,16 +1,15 @@
 'use strict';
 class MainController {
-  public text: string;
-
-  constructor() {
-    this.text = 'My brand new component main!';
-    console.log('init main page ');
+ static $inject = ['ApiRestService'];
+  public data;
+  constructor(public ApiRestService: any ) {
+    this.data = ApiRestService.loadData() ;
+    console.log('init main page data');
   }
 }
 
 export const main  = {
   templateUrl: '/app/components/main/main.template.html',
   controller: MainController,
-  label: 'Home',
 };
 

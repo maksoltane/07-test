@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" ng-app="appPlan">
+<html lang="fr" >
 <head>
   <meta charset="utf-8">
   <title>Plan de charge </title>
@@ -14,11 +14,11 @@
   <!-- endbuild -->
 </head>
 
-<body>
-  <navbar></navbar>
- <breadcrumbs></breadcrumbs>
+<body ng-app="app" >
+  <ng-navbar></ng-navbar>
+ <ng-breadcrumbs></ng-breadcrumbs>
   <div ng-view > </div>
-  <footer></footer>
+  <ng-footer></ng-footer>
 </body>
 <!-- build:js(.tmp) index.js -->
 <script src="jspm_packages/system.js"></script>

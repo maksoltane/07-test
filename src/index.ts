@@ -6,20 +6,21 @@ import { footer } from './app/components/footer/footer.component';
 import { domaines } from './app/components/domaines/domaines.component';
 import { collaborateurs } from './app/components/collaborateurs/collaborateurs.component';
 import { Breadcrumbs } from './app/components/breadcrumbs/breadcrumbs.component';
-import 'angular-route';
-import 'angular-crumble';
+import { ApiRestService } from './app/services/apiRest.service';
 
 import { Routes } from './app/routes/route.component';
 // definit les modules et les composants de la webapp "appPlan"
 angular
-  .module('appPlan', ['ngRoute', 'crumble'])
-  .component('navbar', navbar)
-  .component('breadcrumbs', Breadcrumbs)
-  .component('main', main)
-  .component('footer', footer)
-  .component('collaborateursListe', collaborateurs)
-  .component('domainesListe', domaines)
+  .module('app', ['ngRoute'])
+  .component('ngNavbar', navbar)
+  .component('ngBreadcrumbs', Breadcrumbs)
+  .component('ngMain', main)
+  .component('ngFooter', footer)
+  .component('ngCollaborateursListe', collaborateurs)
+  .component('ngDomainesListe', domaines)
 
+  // définit les services utilisé par la webapp
+  .service('ApiRestService', ApiRestService)
   // definit les routes de la webapp
   .config(Routes);
 

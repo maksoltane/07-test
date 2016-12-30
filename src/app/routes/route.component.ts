@@ -1,24 +1,25 @@
+import 'angular-route';
 class Routes {
 
   constructor($locationProvider:  ng.ILocationProvider , $routeProvider: ng.route.IRouteProvider) {
     $routeProvider
       .when('/collaborateurs',
-      {template: '<collaborateurs-liste></collaborateurs-liste>'}
+      {template: '<ng-collaborateurs-liste></ng-collaborateurs-liste>'}
         )
       .when('/collaborateurs/:collaborateursId',
-      {template: '<collaborateurs-liste></collaborateurs-liste>'}
+      {template: '<ng-collaborateurs-liste></ng-collaborateurs-liste>'}
         )
       .when('/domaines',
-      {template: '<domaines-liste></domaines-liste>'}
+      {template: '<ng-domaines-liste></ng-domaines-liste>'}
         )
       .when('/domaines/:domaineId',
-      {template: '<domaines-liste></domaines-liste>'}
+      {template: '<ng-domaines-liste></ng-domaines-liste>'}
       )
       .when('/',
-      {template: '<main></main>'}
+      {template: '<ng-main></ng-main>'}
         )
       .when('/mainId',
-      {template: '<main></main>'}
+      {template: '<ng-main></ng-main>'}
       )
       .otherwise(
         {redirectTo: '/'}
