@@ -5,6 +5,9 @@ class CollaborateursController {
     this.text1 = 'My brand new component collaborateurs!';
     console.log('init collaborateurs page');
   }
+  getdata() {
+    console.log('rechere film');
+  }
 }
 
 export const collaborateurs = {

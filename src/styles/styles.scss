@@ -2,7 +2,7 @@
 
 @function fade ($color, $opacity) {
 	@return rgba($color, ($opacity/100)*1%)
-}
+};
 
 @import '_colors';
 @import '_config';

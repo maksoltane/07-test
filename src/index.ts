@@ -1,4 +1,5 @@
 'use strict';
+// definit la liste de imports nécessaires au fonctionnement de la webapp 
 import * as angular from 'angular';
 import { navbar } from './app/components/navbar/navbar.component';
 import { main } from './app/components/main/main.component';
@@ -7,9 +8,8 @@ import { domaines } from './app/components/domaines/domaines.component';
 import { collaborateurs } from './app/components/collaborateurs/collaborateurs.component';
 import { Breadcrumbs } from './app/components/breadcrumbs/breadcrumbs.component';
 import { ApiRestService } from './app/services/apiRest.service';
-
 import { Routes } from './app/routes/route.component';
-// definit les modules et les composants de la webapp "appPlan"
+// definit les composants de la webapp "appPlan"
 angular
   .module('app', ['ngRoute'])
   .component('ngNavbar', navbar)
@@ -21,6 +21,7 @@ angular
 
   // définit les services utilisé par la webapp
   .service('ApiRestService', ApiRestService)
+  //
   // definit les routes de la webapp
   .config(Routes);
 
