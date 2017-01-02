@@ -1,20 +1,21 @@
-
-
 class MainController {
-  public message: string;
-
-  constructor() {
-    this.message = 'My brand new component main!';
-    console.log('init main page ');
+  static $inject = ['ApiRestService'];
+  public data;
+  service;
+  // tslint:disable-next-line:no-empty
+  constructor(ApiRestService: any) {
+this.service = ApiRestService;
   }
-
-  gettous() {
-     console.log('get func ');
-    this.message = 'helooo getname';
+  getdata(ndf: string) {
+        this.service.getfilm(ndf)
+      .then((idata): void => {
+        this.data = idata;
+      });
+      return this.data;
   }
 }
 
-export const main  = {
-  templateUrl: '/app/components/home/main.template.html',
+export const main = {
+  templateUrl: '/app/components/main/main.template.html',
   controller: MainController,
-  };
+};
