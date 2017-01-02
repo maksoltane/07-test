@@ -3,16 +3,16 @@ class MainController {
   static $inject = ['ApiRestService'];
   public data;
   service;
-  // tslint:disable-next-line:no-empty
   constructor(ApiRestService: any) {
 this.service = ApiRestService;
   }
-  getdata(ndf: string) {
+  getdata(ndf: string): void   {
+     console.log('send request to get data from Api Rest');
         this.service.getfilm(ndf)
       .then((idata): void => {
         this.data = idata;
       });
-      return this.data;
+      console.log('Receive data from Api Rest');
   }
 }
 

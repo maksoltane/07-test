@@ -35,6 +35,7 @@ SystemJS.config({
     'angular': 'github:angular/bower-angular@1.6.1',
     'angular-animate': 'github:angular/bower-angular-animate@1.6.1',
     'angular-crumble': 'bower:angular-crumble@0.2.2',
+    'angular-resource': 'npm:angular-resource@1.6.1',
     'angular-route': 'github:angular/bower-angular-route@1.6.1',
     'assert': 'github:jspm/nodelibs-assert@0.2.0-alpha',
     'buffer': 'github:jspm/nodelibs-buffer@0.2.0-alpha',
