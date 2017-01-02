@@ -1,0 +1,111 @@
+// @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700';
+
+@function fade ($color, $opacity) {
+	@return rgba($color, ($opacity/100)*1%)
+}
+
+@import '_colors';
+@import '_config';
+
+
+// import bootstrap after var modifs
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+@import 'bootstrap-addons/_index';
+@import 'gantt/_index';
+@import 'gantt-filters/_index';
+
+@import 'notifications/_index';
+
+@import 'loader/_index';
+
+
+.link-danger {
+	color: $ink-danger;
+	text-decoration: underline;
+	&:hover {
+		color: scale-color($ink-danger, $lightness: 10%);
+	}
+}
+
+
+._slate {
+	padding: $BASE;
+	background: $gray-lighter;
+	border: 1px solid $gantt-border;
+}
+
+._relative {
+	position: relative !important;
+}
+._pin {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 0;
+
+	&-right {
+		left: auto;
+		right: 0;
+	}
+}
+._ink-muted {
+	color: $text-muted !important;
+}
+._ink-warning {
+	color: $ink-warning;
+}
+._ink-danger {
+	color: $ink-danger;
+}
+._push {
+	margin-bottom: $BASE;
+}
+._fade {
+	opacity: .6;
+}
+._cushion-left-tiny {
+	padding-left: $TINY !important;
+}
+._cushion-right-tiny {
+	padding-right: $TINY !important;
+}
+._ink-winter {
+	color: white !important;
+}
+._paint-dawn {
+	background: $paint-dawn;
+}
+._paint-winter {
+	background: white;
+}
+._paint-fog {
+	background: $gray-lighter;
+}
+._underline {
+	text-decoration: underline;
+}
+._flush {
+	margin-bottom: 0 !important;
+}
+._push-right {
+	margin-right: $BASE !important;
+}
+._push-right-tiny {
+	margin-right: $TINY !important;
+}
+._push-right-small {
+	margin-right: $SMALL !important;
+}
+
+
+
+	.navbar-brand {
+		padding: 0 5px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+		.navbar-brand img {
+			max-height: $navbar-height;
+			padding: $navbar-padding-horizontal*1.5 $navbar-padding-vertical/2;
+		}

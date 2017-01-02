@@ -1,0 +1,53 @@
+.gantt-task-background,
+.gantt-task-truncated-right,
+.gantt-task-truncated-left {
+   @include gradient-vertical(scale-color($gantt-task-bg, $lightness: 5%), $gantt-task-bg);
+   border: 1px solid $gantt-task-bd;
+   opacity: 1;
+}
+
+
+.gantt-task {
+
+
+   &-background {
+      border-radius: $gantt-header-row-h;
+   }
+
+   &-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      vertical-align: top;
+      color: transparent; // THIS IS WHY TEXT WON'T DISPLAY
+      text-align: left;
+      padding-left: $UNIT;
+
+      > span {
+         display: inline-block;
+         vertical-align: middle;
+         margin:  -.1em 0 0;
+      }
+   }
+
+   .gantt-task-truncated-right,
+   .gantt-task-truncated-left {
+      width: $UNIT*2;
+      color: transparent;
+   }
+   .gantt-task-truncated-right {
+      right: 0;
+      border-left-width: 0;
+   }
+   .gantt-task-truncated-left {
+      left: 0;
+      border-right-width: 0;
+   }
+
+
+   & {
+      height: auto;
+      top: $UNIT;
+      bottom: $UNIT;
+   }
+}

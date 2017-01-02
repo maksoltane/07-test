@@ -1,0 +1,89 @@
+.form-control:not(:hover) {box-shadow: none;}
+
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+.icon-addon {
+    position: relative;
+    color: $input-color-placeholder;
+    display: block;
+}
+
+.icon-addon:after,
+.icon-addon:before {
+    display: table;
+    content: " ";
+}
+
+.icon-addon:after {
+    clear: both;
+}
+
+/**
+ * Glyphicon sizes
+ */
+.icon-addon.addon-md .glyphicon,
+.icon-addon .glyphicon,
+.icon-addon.addon-md .fa,
+.icon-addon .fa {
+   position: absolute;
+   display: block;
+   left: 0;
+   top: 0;
+   width: $input-height-base;
+   line-height: $input-height-base;
+   font-size: $font-size-base;
+   text-align: center;
+   z-index: 2;
+}
+.icon-addon.addon-lg .fa,
+.icon-addon.addon-lg .glyphicon {
+   font-size: $font-size-large;
+   width: $input-height-large;
+   line-height: $input-height-large;
+}
+.icon-addon.addon-sm .fa,
+.icon-addon.addon-sm .glyphicon {
+   font-size: $font-size-small;
+   width: $input-height-small;
+   line-height: $input-height-small;
+}
+
+
+/**
+ * Input sizes
+ */
+.icon-addon.addon-lg .form-control {
+    line-height: $line-height-large;
+    height: $input-height-large;
+    font-size: $font-size-large;
+    padding: $padding-large-vertical $padding-large-horizontal $padding-large-vertical 40px;
+}
+
+.icon-addon.addon-sm .form-control {
+   line-height: $line-height-small;
+   height: $input-height-small;
+   font-size: $font-size-small;
+   padding: $padding-small-vertical $padding-small-horizontal $padding-small-vertical 40px;
+}
+
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+    padding-left: $input-height-base;
+    float: left;
+    font-weight: normal;
+}
+
+
+
+
+
+/**
+ * Active state
+ */
+.icon-addon .form-control:focus + .glyphicon,
+.icon-addon .form-control:focus + .fa {
+    color: $brand-primary;
+}

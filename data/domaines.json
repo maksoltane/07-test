@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "nom": "Domaine Teambox 2",
+    "contrats": [
+      {
+        "contratId": 120,
+        "contratNom": "RPC",
+        "ressources": null
+      },
+      {
+        "contratId": 36,
+        "contratNom": "TMA GSIO",
+        "ressources": null
+      },
+      {
+        "contratId": 66,
+        "contratNom": "GESICO Qualification fonctionnelle",
+        "ressources": null
+      },
+      {
+        "contratId": 70,
+        "contratNom": "DORH MOSAIC",
+        "ressources": null
+      },
+      {
+        "contratId": 72,
+        "contratNom": "DIGIFLOW",
+        "ressources": null
+      },
+      {
+        "contratId": 73,
+        "contratNom": "TRA Rénovation SI Centre de tests",
+        "ressources": null
+      },
+      {
+        "contratId": 75,
+        "contratNom": "RCI Banque RCI DIRECT ALLEMAGNE",
+        "ressources": null
+      },
+      {
+        "contratId": 76,
+        "contratNom": "RCI Banque TMA 2010-2011",
+        "ressources": null
+      },
+      {
+        "contratId": 82,
+        "contratNom": "TMA MAAT ORSAY",
+        "ressources": null
+      },
+      {
+        "contratId": 64,
+        "contratNom": "TMA SERVICE ET MAGASIN",
+        "ressources": null
+      },
+      {
+        "contratId": 87,
+        "contratNom": "HAPPY CHIC - TMA",
+        "ressources": null
+      },
+      {
+        "contratId": 100,
+        "contratNom": "CENTRE DE COMPETENCES PILOTE AMOA",
+        "ressources": null
+      },
+      {
+        "contratId": 98,
+        "contratNom": "ELECTRO DEPOT BELGIQUE",
+        "ressources": null
+      },
+      {
+        "contratId": 99,
+        "contratNom": "EID Centre de Services 2015",
+        "ressources": null
+      },
+      {
+        "contratId": 112,
+        "contratNom": "Centre Automatisation et tests Digital  Allianz",
+        "ressources": null
+      },
+      {
+        "contratId": 109,
+        "contratNom": "CDS CSE NORD NTIC LOT H1",
+        "ressources": null
+      },
+      {
+        "contratId": 121,
+        "contratNom": "CDS PSA 2016",
+        "ressources": null
+      },
+      {
+        "contratId": 110,
+        "contratNom": "CDS CSE NORD NTIC LOT H4",
+        "ressources": null
+      },
+      {
+        "contratId": 124,
+        "contratNom": "Transfert argent",
+        "ressources": null
+      },
+      {
+        "contratId": 32,
+        "contratNom": "Marché Agora santé",
+        "ressources": null
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nom": "contraoumar",
+    "contrats": [
+      {
+        "contratId": 128,
+        "contratNom": "ddd",
+        "ressources": null
+      },
+      {
+        "contratId": 129,
+        "contratNom": "colil",
+        "ressources": null
+      },
+      {
+        "contratId": 101,
+        "contratNom": "SAM - On Demand",
+        "ressources": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nom": "libbeee",
+    "contrats": [
+      {
+        "contratId": 130,
+        "contratNom": "connewdo",
+        "ressources": null
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nom": "dotmbx3110",
+    "contrats": [
+      {
+        "contratId": 131,
+        "contratNom": "xcn",
+        "ressources": null
+      }
+    ]
+  }
+]
