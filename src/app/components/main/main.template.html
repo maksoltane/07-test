@@ -1,16 +1,25 @@
-
 <h4> main component </h4>
 <div class="container">
- <select name=""  class="form-control" required="required" ng-model="reqdata" >
+  <select name="" class="form-control" required="required" ng-model="reqdata">
    <option value="collaborateurs"> Collaborateurs </option>
    <option value="domaines">Domaines</option>
-   <option value="domaine">test</option>
+   <option value="test">test</option>
  </select>
- 
- <button type="button" class="btn btn-default" ng-click=$ctrl.getdata(reqdata) >valider</button>
- 
-
+  <button type="button" class="btn btn-default" ng-click=$ctrl.getdata(reqdata)>valider</button>
 </div>
-  <h5>{{$ctrl.data}}</h5>
+
+<div class="container">
   
+
+
+<table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
+  <tr ng-repeat="x in $ctrl.data">
+    <td data-title="'Id Resource'" header-class="'text-left'" sortable="'id'" filter="{ id: 'text' }">
+      {{x.id}}
+    </td>
+    <td data-title="'Resource'" header-class="'text-right'" sortable="'ressourceNom'" filter="{ ressourceNom: 'text' }">
+      {{x.ressourceNom}}
+    </td>
+  </tr>
+</table>
 </div>

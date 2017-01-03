@@ -32,7 +32,7 @@ SystemJS.config({
   map: {
     '@types/angular': 'npm:@types/angular@1.5.22',
     '@types/angular-route': 'npm:@types/angular-route@1.3.3',
-    'angular': 'github:angular/bower-angular@1.6.1',
+    'angular': 'npm:angular@1.6.1',
     'angular-animate': 'github:angular/bower-angular-animate@1.6.1',
     'angular-crumble': 'bower:angular-crumble@0.2.2',
     'angular-resource': 'npm:angular-resource@1.6.1',
@@ -46,6 +46,7 @@ SystemJS.config({
     'fs': 'github:jspm/nodelibs-fs@0.2.0-alpha',
     'module': 'github:jspm/nodelibs-module@0.2.0-alpha',
     'net': 'github:jspm/nodelibs-net@0.2.0-alpha',
+    'ng-table': 'npm:ng-table@3.0.1',
     'os': 'github:jspm/nodelibs-os@0.2.0-alpha',
     'path': 'github:jspm/nodelibs-path@0.2.0-alpha',
     'process': 'github:jspm/nodelibs-process@0.2.0-alpha',
@@ -268,13 +269,11 @@ SystemJS.config({
     },
     'github:angular/bower-angular-animate@1.6.1': {
       'map': {
-        'angular': 'github:angular/bower-angular@1.6.1'
       }
     },
     'github:angular/bower-angular-route@1.6.1': {
       'map': {
-        'angular': 'github:angular/bower-angular@1.6.1'
-      }
+       }
     },
     'github:frankwallis/plugin-typescript@5.3.3': {
       'map': {
@@ -288,7 +287,7 @@ SystemJS.config({
     },
     'npm:@types/angular@1.5.22': {
       'map': {
-        '@types/jquery': 'npm:@types/jquery@2.0.34'
+        '@types/jquery': 'npm:@types/jquery@2.0.37'
       }
     },
     'bower:angular-crumble@0.2.2': {
@@ -299,7 +298,11 @@ SystemJS.config({
     },
     'bower:angular-route@1.6.1': {
       'map': {
-        'angular': 'bower:angular@1.6.1'
+       }
+    },
+    'npm:ng-table@3.0.1': {
+      'map': {
+        
       }
     }
   }

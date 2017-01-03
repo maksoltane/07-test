@@ -10,7 +10,7 @@
 
 // import bootstrap after var modifs
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-
+@import './ngtable/ng-table.css';
 @import 'bootstrap-addons/_index';
 @import 'gantt/_index';
 @import 'gantt-filters/_index';

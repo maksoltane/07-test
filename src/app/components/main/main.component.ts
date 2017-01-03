@@ -1,14 +1,20 @@
+import 'ng-table';
+
+    interface INgTableChildScope extends IScope {
+        params: NgTableParams<any>;
+        $columns: ColumnDef[];
+    }
 
 class MainController {
-  static $inject = ['ApiRestService'];
+  static $inject = ['ApiRestService', 'NgTableParams'];
   public data;
-  service;
+  APIservice;
   constructor(ApiRestService: any) {
-this.service = ApiRestService;
+this.APIservice = ApiRestService;
   }
   getdata(ndf: string): void   {
      console.log('send request to get data from Api Rest');
-        this.service.getfilm(ndf)
+        this.APIservice.getfilm(ndf)
       .then((idata): void => {
         this.data = idata;
       });
