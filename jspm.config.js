@@ -1,9 +1,4 @@
 SystemJS.config({
-  devConfig: {
-    'map': {
-      'angular-mocks': 'npm:angular-mocks@1.6.1'
-    }
-  },
   packages: {
     'src': {
       'defaultExtension': 'ts'
@@ -30,12 +25,11 @@ SystemJS.config({
     'bower:*.json'
   ],
   map: {
-    '@types/angular': 'npm:@types/angular@1.5.22',
-    '@types/angular-route': 'npm:@types/angular-route@1.3.3',
-    'angular': 'npm:angular@1.6.1',
-    'angular-animate': 'github:angular/bower-angular-animate@1.6.1',
-    'angular-crumble': 'bower:angular-crumble@0.2.2',
-    'angular-resource': 'npm:angular-resource@1.6.1',
+    'angular': 'github:angular/bower-angular@1.6.1',
+    'angular-flatpickr': 'npm:angular-flatpickr@2.0.0',
+    'angular-gantt': 'npm:angular-gantt@1.3.0',
+    'angular-moment': 'npm:angular-moment@1.0.1',
+    'angular-resource': 'github:angular/bower-angular-resource@1.6.1',
     'angular-route': 'github:angular/bower-angular-route@1.6.1',
     'assert': 'github:jspm/nodelibs-assert@0.2.0-alpha',
     'buffer': 'github:jspm/nodelibs-buffer@0.2.0-alpha',
@@ -43,10 +37,11 @@ SystemJS.config({
     'constants': 'github:jspm/nodelibs-constants@0.2.0-alpha',
     'crypto': 'github:jspm/nodelibs-crypto@0.2.0-alpha',
     'events': 'github:jspm/nodelibs-events@0.2.0-alpha',
+    'flatpickr': 'npm:flatpickr@2.2.9',
     'fs': 'github:jspm/nodelibs-fs@0.2.0-alpha',
     'module': 'github:jspm/nodelibs-module@0.2.0-alpha',
+    'moment': 'npm:moment@2.17.1',
     'net': 'github:jspm/nodelibs-net@0.2.0-alpha',
-    'ng-table': 'npm:ng-table@3.0.1',
     'os': 'github:jspm/nodelibs-os@0.2.0-alpha',
     'path': 'github:jspm/nodelibs-path@0.2.0-alpha',
     'process': 'github:jspm/nodelibs-process@0.2.0-alpha',
@@ -267,42 +262,29 @@ SystemJS.config({
         'string_decoder-browserify': 'npm:string_decoder@0.10.31'
       }
     },
-    'github:angular/bower-angular-animate@1.6.1': {
-      'map': {
-      }
-    },
-    'github:angular/bower-angular-route@1.6.1': {
-      'map': {
-       }
-    },
     'github:frankwallis/plugin-typescript@5.3.3': {
       'map': {
         'typescript': 'npm:typescript@2.1.4'
       }
     },
-    'npm:@types/angular-route@1.3.3': {
+    'github:angular/bower-angular-resource@1.6.1': {
       'map': {
-        '@types/angular': 'npm:@types/angular@1.5.22'
+        'angular': 'github:angular/bower-angular@1.6.1'
       }
     },
-    'npm:@types/angular@1.5.22': {
+    'github:angular/bower-angular-route@1.6.1': {
       'map': {
-        '@types/jquery': 'npm:@types/jquery@2.0.37'
+        'angular': 'github:angular/bower-angular@1.6.1'
       }
     },
-    'bower:angular-crumble@0.2.2': {
+    'npm:flatpickr@2.2.9': {
       'map': {
-        'angular': 'bower:angular@1.6.1',
-        'angular-route': 'bower:angular-route@1.6.1'
+        'css': 'github:systemjs/plugin-css@0.1.32'
       }
     },
-    'bower:angular-route@1.6.1': {
+    'npm:angular-moment@1.0.1': {
       'map': {
-       }
-    },
-    'npm:ng-table@3.0.1': {
-      'map': {
-        
+        'moment': 'npm:moment@2.17.1'
       }
     }
   }

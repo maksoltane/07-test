@@ -4,22 +4,13 @@ class Routes {
   static $inject = ['$locationProvider', '$routeProvider'];
   constructor($locationProvider: ng.ILocationProvider, $routeProvider: ng.route.IRouteProvider) {
     $routeProvider
-      .when('/collaborateurs',
-      { template: '<ng-collaborateurs-liste></ng-collaborateurs-liste>' }
+      .when( '/:domain/:contract',
+      { template: '<ng-domain-contract></ng-domain-contract>' }
       )
-      .when('/collaborateurs/:collaborateursId',
-      { template: '<ng-collaborateurs-liste></ng-collaborateurs-liste>' }
-      )
-      .when('/domaines',
-      { template: '<ng-domaines-liste></ng-domaines-liste>' }
-      )
-      .when('/domaines/:domaineId',
-      { template: '<ng-domaines-liste></ng-domaines-liste>' }
+      .when('/:domain',
+      { template: '<ng-domain></ng-domain>' }
       )
       .when('/',
-      { template: '<ng-main></ng-main>' }
-      )
-      .when('/mainId',
       { template: '<ng-main></ng-main>' }
       )
       .otherwise(

@@ -7,19 +7,20 @@
  </select>
   <button type="button" class="btn btn-default" ng-click=$ctrl.getdata(reqdata)>valider</button>
 </div>
+{{$ctrl.currentDate}}
+<!--<h1>{{$ctrl.data}}</h1>-->
+<div gantt
+    data="$ctrl.data"
+    options="$ctrl.config"
+    filter-task="{'name': $ctrl.filterTask}"
+    filter-row="{'name': $ctrl.filterRow}"
+    from-date="$ctrl.startDate" to-date="$ctrl.endDate" api="$ctrl.api">
 
-<div class="container">
-  
+    <gantt-tree
+        enabled="vm.displayTree"
+        header-content="vm.options.side.headerContent"
+        keep-ancestor-on-filter-row="vm.options.sidekeepAncestorOnFilterRow">
+    </gantt-tree>
 
-
-<table ng-table="$ctrl.tableParams" show-filter="true" class="table table-condensed table-bordered">
-  <tr ng-repeat="x in $ctrl.data">
-    <td data-title="'Id Resource'" header-class="'text-left'" sortable="'id'" filter="{ id: 'text' }">
-      {{x.id}}
-    </td>
-    <td data-title="'Resource'" header-class="'text-right'" sortable="'ressourceNom'" filter="{ ressourceNom: 'text' }">
-      {{x.ressourceNom}}
-    </td>
-  </tr>
-</table>
+    <gantt-tooltips></gantt-tooltips>
 </div>

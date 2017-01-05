@@ -5,13 +5,15 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "typeRoots": ["node_modules/@types/"],
+    "typeRoots": ["node_modules/@types/",
+   "jspm_packages/npm/@types"],
     "types": [
       "angular",
       "angular-mocks",
       "jquery",
       "jasmine",
-      "es6-shim"
+      "es6-shim",
+      "moment"
     ]
   },
   "compileOnSave": false,
