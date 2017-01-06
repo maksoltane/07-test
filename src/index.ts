@@ -18,7 +18,7 @@ angular
   .component('ngNavbar', navbar)
   .component('ngBreadcrumbs', Breadcrumbs)
   .component('ngMain', main)
-  .component('gantt', gantt)
+  .component('ngGantt', gantt)
   .component('ngFooter', footer)
   .component('ngDomainContract', DomainContract)
   .component('ngDomain', Domaines)
