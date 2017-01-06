@@ -9,18 +9,4 @@
 </div>
 {{$ctrl.currentDate}}
 <!--<h1>{{$ctrl.data}}</h1>-->
-<div gantt
-    data="$ctrl.data"
-    options="$ctrl.config"
-    filter-task="{'name': $ctrl.filterTask}"
-    filter-row="{'name': $ctrl.filterRow}"
-    from-date="$ctrl.startDate" to-date="$ctrl.endDate" api="$ctrl.api">
-
-    <gantt-tree
-        enabled="vm.displayTree"
-        header-content="vm.options.side.headerContent"
-        keep-ancestor-on-filter-row="vm.options.sidekeepAncestorOnFilterRow">
-    </gantt-tree>
-
-    <gantt-tooltips></gantt-tooltips>
-</div>
+<gantt></gantt>

@@ -1,7 +1,7 @@
 // definit la liste de imports nécessaires au fonctionnement de la webapp 
 import * as angular from 'angular';
 import moment from 'moment';
-import  'angular-gantt';
+import 'angular-gantt';
 import 'angular-moment';
 import { navbar } from './app/components/navbar/navbar.component';
 import { main } from './app/components/main/main.component';
@@ -11,19 +11,21 @@ import { DomainContract } from './app/components/domaincontract/domaincontract.c
 import { Breadcrumbs } from './app/components/breadcrumbs/breadcrumbs.component';
 import { ApiRestService } from './app/services/apiRest.service';
 import { Routes } from './app/routes/route.component';
+
 // definit les composants de la webapp "appPlan"
 angular
-  .module('app', ['ngRoute', 'ngResource', 'angularMoment'])
+  .module('app', ['ngRoute', 'ngResource', 'angularMoment', 'gantt'])
   .component('ngNavbar', navbar)
   .component('ngBreadcrumbs', Breadcrumbs)
   .component('ngMain', main)
   .component('ngFooter', footer)
   .component('ngDomainContract', DomainContract)
-  .component('ngDomain', Domaines )
+  .component('ngDomain', Domaines)
   // tslint:disable-next-line:typedef
-  .run( [ '$rootScope' , ( $rootScope) =>  {
-          moment.locale('fr'); }
-        ])
+  .run(['$rootScope', ($rootScope) => {
+    moment.locale('fr');
+  }
+  ])
   // définit les services utilisé par la webapp
   .service('ApiRestService', ApiRestService)
   //

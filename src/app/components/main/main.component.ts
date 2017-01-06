@@ -1,9 +1,8 @@
 
 import moment from 'moment';
 import 'moment/locale/fr';
-import  'angular-gantt';
 class MainController {
-  static $inject = ['ApiRestService'];
+  static $inject = ['ApiRestService', 'Gantt'];
   public data: Array<{}>;
 
   currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
@@ -11,7 +10,7 @@ class MainController {
      }
 
   getdata(ndf: string): void {
-    console.log('send request to get data from Api Rest');
+    console.log('send request to get ' + ndf + ' data from Api Rest');
     this.ApiRestService.getfilm(ndf)
       .then((idata): void => {
         this.data = idata;
