@@ -2,7 +2,7 @@
 import moment from 'moment';
 import 'moment/locale/fr';
 class MainController {
-  static $inject = ['ApiRestService', 'Gantt'];
+  static $inject = ['ApiRestService'];
   public data: Array<{}>;
 
   currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');

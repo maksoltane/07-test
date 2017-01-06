@@ -11,13 +11,14 @@ import { DomainContract } from './app/components/domaincontract/domaincontract.c
 import { Breadcrumbs } from './app/components/breadcrumbs/breadcrumbs.component';
 import { ApiRestService } from './app/services/apiRest.service';
 import { Routes } from './app/routes/route.component';
-
+import {gantt} from './app/components/gantt/gantt.component';
 // definit les composants de la webapp "appPlan"
 angular
-  .module('app', ['ngRoute', 'ngResource', 'angularMoment', 'gantt'])
+  .module('app', ['ngRoute', 'ngResource', 'gantt'])
   .component('ngNavbar', navbar)
   .component('ngBreadcrumbs', Breadcrumbs)
   .component('ngMain', main)
+  .component('gantt', gantt)
   .component('ngFooter', footer)
   .component('ngDomainContract', DomainContract)
   .component('ngDomain', Domaines)
