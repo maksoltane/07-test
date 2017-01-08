@@ -7,7 +7,7 @@ class PlanningController {
 }
 
 export const planning = {
-  templateUrl: 'src/app/planning.template.html',
+  templateUrl: 'src/app/planning/planning.template.html',
   controller: PlanningController
 };
 

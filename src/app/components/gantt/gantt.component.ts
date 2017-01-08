@@ -5,6 +5,6 @@ class GanttComponentController  {
 }
 
 export const gantt = {
-  templateUrl: '/app/components/gantt/gantt.template.html',
+  templateUrl: 'src/app/components/gantt/gantt.template.html',
    controller: GanttComponentController,
    };

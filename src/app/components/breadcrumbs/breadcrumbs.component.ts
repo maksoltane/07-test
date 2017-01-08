@@ -9,6 +9,6 @@ class BreadcrumbsController {
 }
 
 export const Breadcrumbs = {
-  templateUrl: '/app/components/breadcrumbs/breadcrumbs.template.html',
+  templateUrl: 'src/app/components/breadcrumbs/breadcrumbs.template.html',
   controller: BreadcrumbsController,
 };

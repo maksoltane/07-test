@@ -1,4 +1,9 @@
 SystemJS.config({
+  devConfig: {
+    'map': {
+      'angular-mocks': 'npm:angular-mocks@1.6.1'
+    }
+  },
   packages: {
     'src': {
       'defaultExtension': 'ts'
@@ -25,7 +30,11 @@ SystemJS.config({
     'bower:*.json'
   ],
   map: {
+    '@types/angular': 'npm:@types/angular@1.5.23',
+    '@types/angular-route': 'npm:@types/angular-route@1.3.3',
     'angular': 'github:angular/bower-angular@1.6.1',
+    'angular-animate': 'github:angular/bower-angular-animate@1.6.1',
+    'angular-crumble': 'bower:angular-crumble@0.2.2',
     'angular-flatpickr': 'npm:angular-flatpickr@2.0.0',
     'angular-gantt': 'npm:angular-gantt@1.3.0',
     'angular-moment': 'npm:angular-moment@1.0.1',
@@ -42,6 +51,7 @@ SystemJS.config({
     'module': 'github:jspm/nodelibs-module@0.2.0-alpha',
     'moment': 'npm:moment@2.17.1',
     'net': 'github:jspm/nodelibs-net@0.2.0-alpha',
+    'ng-table': 'npm:ng-table@3.1.0',
     'os': 'github:jspm/nodelibs-os@0.2.0-alpha',
     'path': 'github:jspm/nodelibs-path@0.2.0-alpha',
     'process': 'github:jspm/nodelibs-process@0.2.0-alpha',
@@ -285,6 +295,37 @@ SystemJS.config({
     'npm:angular-moment@1.0.1': {
       'map': {
         'moment': 'npm:moment@2.17.1'
+      }
+    },
+    'npm:ng-table@3.1.0': {
+      'map': {
+        '@types/angular': 'npm:@types/angular@1.5.23'
+      }
+    },
+    'npm:@types/angular-route@1.3.3': {
+      'map': {
+        '@types/angular': 'npm:@types/angular@1.5.23'
+      }
+    },
+    'github:angular/bower-angular-animate@1.6.1': {
+      'map': {
+        'angular': 'github:angular/bower-angular@1.6.1'
+      }
+    },
+    'npm:@types/angular@1.5.23': {
+      'map': {
+        '@types/jquery': 'npm:@types/jquery@2.0.39'
+      }
+    },
+    'bower:angular-crumble@0.2.2': {
+      'map': {
+        'angular-route': 'bower:angular-route@1.6.1',
+        'angular': 'bower:angular@1.6.1'
+      }
+    },
+    'bower:angular-route@1.6.1': {
+      'map': {
+        'angular': 'bower:angular@1.6.1'
       }
     }
   }

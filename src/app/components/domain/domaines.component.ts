@@ -8,6 +8,6 @@ class DomainController {
 }
 
 export const Domaines = {
-  templateUrl: '/app/components/domain/domaines.template.html',
+  templateUrl: 'src/app/components/domain/domaines.template.html',
   controller: DomainController,
  };

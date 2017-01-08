@@ -19,7 +19,7 @@ class MainController {
 }
 
 export const main = {
-  templateUrl: '/app/components/main/main.template.html',
+  templateUrl: 'src/app/components/main/main.template.html',
   controller: MainController,
 };
 
