@@ -14,7 +14,7 @@ import { Routes } from './app/routes/route.component';
 import {gantt} from './app/components/gantt/gantt.component';
 // definit les composants de la webapp "appPlan"
 angular
-  .module('app', ['ngRoute', 'ngResource', 'gantt'])
+  .module('app', ['ngRoute', 'ngResource', 'gantt',  'gantt.table', 'gantt.movable', 'gantt.tooltips', 'gantt.bounds', 'gantt.progress', 'gantt.tree', 'gantt.groups'])
   .component('ngNavbar', navbar)
   .component('ngBreadcrumbs', Breadcrumbs)
   .component('ngMain', main)
