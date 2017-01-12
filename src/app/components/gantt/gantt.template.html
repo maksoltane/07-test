@@ -1,4 +1,8 @@
-<h6> gantt test component </h6>
-{{$ctrl.datatest}}
-<div gantt data=$ctrl.data>
+<!-- Filters -->
+
+<!-- Filters -->
+  <div gantt  options="$ctrl.config" ng-init="$ctrl.GetDataforGantt('collaborateurs')"  time-frames="$ctrl.timeFrames" date-frames="$ctrl.dateFrames"
+    allow-side-resizing='false' data="$ctrl.data" from-date="$ctrl.GetMonthBegin" to-date="$ctrl.GetMonthEnd">
+    <gantt-table>
+    </gantt-table>
 </div>

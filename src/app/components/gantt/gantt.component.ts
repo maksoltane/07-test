@@ -1,85 +1,72 @@
-import 'angular-gantt';
-import 'angular-moment';
-class GanttComponentController  {
- static $inject = ['ApiRestService', 'Gantt'];
- data: Array<{}> = [{name: 'Milestones', height: '3em', sortable: false, classes: 'gantt-row-milestone', color: '#45607D', tasks: [
-                   {name: 'Kickoff', color: '#93C47D', from: '2013-10-07T09:00:00', to: '2013-10-07T10:00:00', data: 'Can contain any custom data or object'},
-                   {name: 'Concept approval', color: '#93C47D', from: new Date(2013, 9, 18, 18, 0, 0), to: new Date(2013, 9, 18, 18, 0, 0), est: new Date(2013, 9, 16, 7, 0, 0), lct: new Date(2013, 9, 19, 0, 0, 0)},
-                   {name: 'Development finished', color: '#93C47D', from: new Date(2013, 10, 15, 18, 0, 0), to: new Date(2013, 10, 15, 18, 0, 0)},
-                   {name: 'Shop is running', color: '#93C47D', from: new Date(2013, 10, 22, 12, 0, 0), to: new Date(2013, 10, 22, 12, 0, 0)},
-                   {name: 'Go-live', color: '#93C47D', from: new Date(2013, 10, 29, 16, 0, 0), to: new Date(2013, 10, 29, 16, 0, 0)}
-               ], data: 'Can contain any custom data or object'},
-               {name: 'Status meetings', tasks: [
-                   {name: 'Demo #1', color: '#9FC5F8', from: new Date(2013, 9, 25, 15, 0, 0), to: new Date(2013, 9, 25, 18, 30, 0)},
-                   {name: 'Demo #2', color: '#9FC5F8', from: new Date(2013, 10, 1, 15, 0, 0), to: new Date(2013, 10, 1, 18, 0, 0)},
-                   {name: 'Demo #3', color: '#9FC5F8', from: new Date(2013, 10, 8, 15, 0, 0), to: new Date(2013, 10, 8, 18, 0, 0)},
-                   {name: 'Demo #4', color: '#9FC5F8', from: new Date(2013, 10, 15, 15, 0, 0), to: new Date(2013, 10, 15, 18, 0, 0)},
-                   {name: 'Demo #5', color: '#9FC5F8', from: new Date(2013, 10, 24, 9, 0, 0), to: new Date(2013, 10, 24, 10, 0, 0)}
-               ]},
-               {name: 'Kickoff', movable: {allowResizing: false}, tasks: [
-                   {name: 'Day 1', color: '#9FC5F8', from: new Date(2013, 9, 7, 9, 0, 0), to: new Date(2013, 9, 7, 17, 0, 0),
-                       progress: {percent: 100, color: '#3C8CF8'}, movable: false},
-                   {name: 'Day 2', color: '#9FC5F8', from: new Date(2013, 9, 8, 9, 0, 0), to: new Date(2013, 9, 8, 17, 0, 0),
-                       progress: {percent: 100, color: '#3C8CF8'}},
-                   {name: 'Day 3', color: '#9FC5F8', from: new Date(2013, 9, 9, 8, 30, 0), to: new Date(2013, 9, 9, 12, 0, 0),
-                       progress: {percent: 100, color: '#3C8CF8'}}
-               ]},
-               {name: 'Create concept', tasks: [
-                   {name: 'Create concept', content: '<i class="fa fa-cog" ng-click="scope.handleTaskIconClick(task.model)"></i> {{task.model.name}}', color: '#F1C232', from: new Date(2013, 9, 10, 8, 0, 0), to: new Date(2013, 9, 16, 18, 0, 0), est: new Date(2013, 9, 8, 8, 0, 0), lct: new Date(2013, 9, 18, 20, 0, 0),
-                       progress: 100}
-               ]},
-               {name: 'Finalize concept', tasks: [
-                   {name: 'Finalize concept', color: '#F1C232', from: new Date(2013, 9, 17, 8, 0, 0), to: new Date(2013, 9, 18, 18, 0, 0),
-                       progress: 100}
-               ]},
-               {name: 'Development', children: ['Sprint 1', 'Sprint 2', 'Sprint 3', 'Sprint 4'], content: '<i class="fa fa-file-code-o" ng-click="scope.handleRowIconClick(row.model)"></i> {{row.model.name}}'},
-               {name: 'Sprint 1', tooltips: false, tasks: [
-                   {name: 'Product list view', color: '#F1C232', from: new Date(2013, 9, 21, 8, 0, 0), to: new Date(2013, 9, 25, 15, 0, 0),
-                       progress: 25}
-               ]},
-               {name: 'Sprint 2', tasks: [
-                   {name: 'Order basket', color: '#F1C232', from: new Date(2013, 9, 28, 8, 0, 0), to: new Date(2013, 10, 1, 15, 0, 0)}
-               ]},
-               {name: 'Sprint 3', tasks: [
-                   {name: 'Checkout', color: '#F1C232', from: new Date(2013, 10, 4, 8, 0, 0), to: new Date(2013, 10, 8, 15, 0, 0)}
-               ]},
-               {name: 'Sprint 4', tasks: [
-                   {name: 'Login & Signup & Admin Views', color: '#F1C232', from: new Date(2013, 10, 11, 8, 0, 0), to: new Date(2013, 10, 15, 15, 0, 0)}
-               ]},
-               {name: 'Hosting'},
-               {name: 'Setup', tasks: [
-                   {name: 'HW', color: '#F1C232', from: new Date(2013, 10, 18, 8, 0, 0), to: new Date(2013, 10, 18, 12, 0, 0)}
-               ]},
-               {name: 'Config', tasks: [
-                   {name: 'SW / DNS/ Backups', color: '#F1C232', from: new Date(2013, 10, 18, 12, 0, 0), to: new Date(2013, 10, 21, 18, 0, 0)}
-               ]},
-               {name: 'Server', parent: 'Hosting', children: ['Setup', 'Config']},
-               {name: 'Deployment', parent: 'Hosting', tasks: [
-                   {name: 'Depl. & Final testing', color: '#F1C232', from: new Date(2013, 10, 21, 8, 0, 0), to: new Date(2013, 10, 22, 12, 0, 0), 'classes': 'gantt-task-deployment'}
-               ]},
-               {name: 'Workshop', tasks: [
-                   {name: 'On-side education', color: '#F1C232', from: new Date(2013, 10, 24, 9, 0, 0), to: new Date(2013, 10, 25, 15, 0, 0)}
-               ]},
-               {name: 'Content', tasks: [
-                   {name: 'Supervise content creation', color: '#F1C232', from: new Date(2013, 10, 26, 9, 0, 0), to: new Date(2013, 10, 29, 16, 0, 0)}
-               ]},
-               {name: 'Documentation', tasks: [
-                   {name: 'Technical/User documentation', color: '#F1C232', from: new Date(2013, 10, 26, 8, 0, 0), to: new Date(2013, 10, 28, 18, 0, 0)}
-               ]}];
+import moment from 'moment';
+import * as angular from 'angular';
 
-
-
-
-// tslint:disable-next-line:no-empty
-datatest: string = 'hello';
-// tslint:disable-next-line:no-empty
-constructor () {
-
+class Coworker {
+    constructor(
+        public id: number,
+        public name: string,
+        public Nom: string,
+        public Prenom: string,
+        public occupations: any,
+        public lien_opp: boolean,
+    ) {
+    }
 }
+class GanttComponentController {
+    static $inject = ['ApiRestService'];
+    data: Array<{}>;
+    dateFrames = {
+        JourFerier: {
+            date: moment('2017-01-30', 'YYYY-MM-DD'), // a specific date
+            targets: ['closed'] // use timeFrame named day for halloween. We won't close for noon.
+        },
+
+        weekend: {
+            evaluator: function (date: any) { // a custom function evaluated for each day in the gantt
+                return date.isoWeekday() === 6 || date.isoWeekday() === 7;
+            },
+            targets: ['closed'] // use timeFrame named closed for saturday and sunday.
+        }
+    };
+
+    timeFrames = {
+        closed: {
+            magnet: false, // this will disable magnet snapping
+            working: false // we don't work when it's closed
+        }
+    };
+    // tslint:disable:no-empty
+    GetMonthBegin = moment();
+    GetMonthEnd = moment().add(1, 'month').add(1, 'day');
+
+    constructor(private ApiRestService: any) { }
+
+    ParseResolveForgantt(resolve: any): any {
+        if (!resolve) { return null; };
+        let _coworkers = [];
+        console.log(' ParseResolveForgantt');
+        angular.forEach(resolve, (coworker, ind) => {
+            let _coworker = new Coworker(coworker.id, `${coworker.ressourcePrenom} ${coworker.ressourceNom}`, coworker.ressourceNom, coworker.ressourcePrenom, coworker.occupations, coworker.lienOPP);
+            _coworkers.push(_coworker);
+        });
+        return _coworkers;
+    }
+
+    GetDataforGantt(ndf: string): void {
+        console.log('GetDataforGantt ' + ndf);
+        this.ApiRestService.GetdatafromREST(ndf)
+            .then((data): void => {
+                this.data = this.ParseResolveForgantt(data);
+            });
+    }
+
+    loadData = function () {
+        console.log('test onload');
+    };
 
 }
 
 export const gantt = {
-  templateUrl: 'src/app/components/gantt/gantt.template.html',
-   controller: GanttComponentController,
-   };
+    templateUrl: 'src/app/components/gantt/gantt.template.html',
+    controller: GanttComponentController,
+};

@@ -1,4 +1,5 @@
 
-  // import bootstrap after var modifs
-  @import '../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import 'jspm_packages/bower/bootstrap@3.3.7/dist/css/bootstrap.css';
+@import 'jspm_packages/bower/angular-gantt@1.3.0/assets/angular-gantt.css';
+@import 'jspm_packages/bower/angular-gantt@1.3.0/assets/angular-gantt-plugins.css';
 

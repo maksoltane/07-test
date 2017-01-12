@@ -13,11 +13,11 @@ class ApiRestService {
   };
   constructor(private $resource: ng.resource.IResourceService) { }
 
-  getfilm(ndf: string,
+  GetdatafromREST(param: string,
     success: (data: any) => any,
     error?: (err: any) => any
   ): ng.IPromise<any> {
-    return this.$resource('http://teambox.cds-lille.easylis.intra/teambox/resource-rest/V1_1/' + ndf, null, this._queryConfig)
+    return this.$resource('http://teambox.cds-lille.easylis.intra/teambox/resource-rest/V1_1/' + param, null, this._queryConfig)
       .query()
       .$promise
       .then(success, error);

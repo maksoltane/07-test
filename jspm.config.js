@@ -36,17 +36,19 @@ SystemJS.config({
     'angular-animate': 'github:angular/bower-angular-animate@1.6.1',
     'angular-crumble': 'bower:angular-crumble@0.2.2',
     'angular-flatpickr': 'npm:angular-flatpickr@2.0.0',
-    'angular-gantt': 'npm:angular-gantt@1.3.0',
+    'angular-gantt': 'bower:angular-gantt@1.3.0',
     'angular-moment': 'npm:angular-moment@1.0.1',
     'angular-resource': 'github:angular/bower-angular-resource@1.6.1',
     'angular-route': 'github:angular/bower-angular-route@1.6.1',
+    'angular-ui-tree': 'bower:angular-ui-tree@2.22.2',
     'assert': 'github:jspm/nodelibs-assert@0.2.0-alpha',
+    'bootstrap': 'bower:bootstrap@3.3.7',
     'buffer': 'github:jspm/nodelibs-buffer@0.2.0-alpha',
     'child_process': 'github:jspm/nodelibs-child_process@0.2.0-alpha',
     'constants': 'github:jspm/nodelibs-constants@0.2.0-alpha',
     'crypto': 'github:jspm/nodelibs-crypto@0.2.0-alpha',
     'events': 'github:jspm/nodelibs-events@0.2.0-alpha',
-    'flatpickr': 'npm:flatpickr@2.2.9',
+    'flatpickr': 'npm:flatpickr@2.3.4',
     'fs': 'github:jspm/nodelibs-fs@0.2.0-alpha',
     'module': 'github:jspm/nodelibs-module@0.2.0-alpha',
     'moment': 'npm:moment@2.17.1',
@@ -154,7 +156,7 @@ SystemJS.config({
         'pbkdf2': 'npm:pbkdf2@3.0.9',
         'evp_bytestokey': 'npm:evp_bytestokey@1.0.0',
         'browserify-aes': 'npm:browserify-aes@1.0.6',
-        'asn1.js': 'npm:asn1.js@4.9.0'
+        'asn1.js': 'npm:asn1.js@4.9.1'
       }
     },
     'npm:browserify-cipher@1.0.0': {
@@ -220,13 +222,6 @@ SystemJS.config({
         'brorand': 'npm:brorand@1.0.6'
       }
     },
-    'npm:asn1.js@4.9.0': {
-      'map': {
-        'bn.js': 'npm:bn.js@4.11.6',
-        'inherits': 'npm:inherits@2.0.3',
-        'minimalistic-assert': 'npm:minimalistic-assert@1.0.0'
-      }
-    },
     'npm:hash.js@1.0.3': {
       'map': {
         'inherits': 'npm:inherits@2.0.3'
@@ -287,11 +282,6 @@ SystemJS.config({
         'angular': 'github:angular/bower-angular@1.6.1'
       }
     },
-    'npm:flatpickr@2.2.9': {
-      'map': {
-        'css': 'github:systemjs/plugin-css@0.1.32'
-      }
-    },
     'npm:angular-moment@1.0.1': {
       'map': {
         'moment': 'npm:moment@2.17.1'
@@ -326,6 +316,42 @@ SystemJS.config({
     'bower:angular-route@1.6.1': {
       'map': {
         'angular': 'bower:angular@1.6.1'
+      }
+    },
+    'bower:angular-gantt@1.3.0': {
+      'map': {
+        'angular-moment': 'bower:angular-moment@1.0.1',
+        'css': 'github:systemjs/plugin-css@0.1.32',
+        'angular': 'bower:angular@1.6.1'
+      }
+    },
+    'bower:angular-moment@1.0.1': {
+      'map': {
+        'moment': 'bower:moment@2.17.1',
+        'angular': 'bower:angular@1.6.1'
+      }
+    },
+    'bower:angular-ui-tree@2.22.2': {
+      'map': {
+        'angular': 'bower:angular@1.5.10',
+        'css': 'github:systemjs/plugin-css@0.1.32'
+      }
+    },
+    'bower:bootstrap@3.3.7': {
+      'map': {
+        'jquery': 'bower:jquery@3.1.1'
+      }
+    },
+    'npm:flatpickr@2.3.4': {
+      'map': {
+        'css': 'github:systemjs/plugin-css@0.1.32'
+      }
+    },
+    'npm:asn1.js@4.9.1': {
+      'map': {
+        'bn.js': 'npm:bn.js@4.11.6',
+        'inherits': 'npm:inherits@2.0.3',
+        'minimalistic-assert': 'npm:minimalistic-assert@1.0.0'
       }
     }
   }
