@@ -53,6 +53,7 @@ SystemJS.config({
     'module': 'github:jspm/nodelibs-module@0.2.0-alpha',
     'moment': 'npm:moment@2.17.1',
     'net': 'github:jspm/nodelibs-net@0.2.0-alpha',
+    'ng-infinite-scroll': 'npm:ng-infinite-scroll@1.3.0',
     'ng-table': 'npm:ng-table@3.1.0',
     'os': 'github:jspm/nodelibs-os@0.2.0-alpha',
     'path': 'github:jspm/nodelibs-path@0.2.0-alpha',
