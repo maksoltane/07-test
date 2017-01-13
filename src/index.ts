@@ -11,6 +11,9 @@ import 'jspm_packages/bower/angular-gantt@1.3.0/assets/angular-gantt-progress-pl
 import 'jspm_packages/bower/angular-gantt@1.3.0/assets/angular-gantt-groups-plugin.js';
 import 'jspm_packages/bower/angular-gantt@1.3.0/assets/angular-gantt-table-plugin.js';
 import 'jspm_packages/bower/angular-gantt@1.3.0/assets/angular-gantt-resizeSensor-plugin.js';
+
+
+
 // import modules internes 
 import { navbar } from './app/components/navbar/navbar.component';
 import { main } from './app/components/main/main.component';

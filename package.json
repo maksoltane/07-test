@@ -93,6 +93,7 @@
       "angular-moment": "npm:angular-moment@^1.0.1",
       "angular-resource": "github:angular/bower-angular-resource@^1.6.1",
       "angular-route": "github:angular/bower-angular-route@^1.6.1",
+      "angular-spinner": "npm:angular-spinner@^0.8.1",
       "angular-ui-tree": "bower:angular-ui-tree@^2.22.2",
       "bootstrap": "bower:bootstrap@^3.3.7",
       "flatpickr": "npm:flatpickr@^2.2.9",

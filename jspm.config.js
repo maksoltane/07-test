@@ -40,6 +40,7 @@ SystemJS.config({
     'angular-moment': 'npm:angular-moment@1.0.1',
     'angular-resource': 'github:angular/bower-angular-resource@1.6.1',
     'angular-route': 'github:angular/bower-angular-route@1.6.1',
+    'angular-spinner': 'npm:angular-spinner@0.8.1',
     'angular-ui-tree': 'bower:angular-ui-tree@2.22.2',
     'assert': 'github:jspm/nodelibs-assert@0.2.0-alpha',
     'bootstrap': 'bower:bootstrap@3.3.7',
@@ -353,6 +354,11 @@ SystemJS.config({
         'bn.js': 'npm:bn.js@4.11.6',
         'inherits': 'npm:inherits@2.0.3',
         'minimalistic-assert': 'npm:minimalistic-assert@1.0.0'
+      }
+    },
+    'npm:angular-spinner@0.8.1': {
+      'map': {
+        'spin.js': 'npm:spin.js@2.3.2'
       }
     }
   }

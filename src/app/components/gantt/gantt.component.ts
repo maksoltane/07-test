@@ -23,62 +23,51 @@ class Dayoff {
 }
 class GanttComponentController {
     static $inject = ['ApiRestService'];
+    Datastate: Boolean = false;
     data: Array<{}>;
-    dayoff: any;
-JsonFeries: Array<{}> = [
-    {
-        'libelle': 'Noël',
-        'date': '01/02/2017'
-    },
-    {
-        'libelle': 'Nouvel an',
-        'date': '23/01/2017'
-    },
-    {
-        'libelle': '8 mai 1945',
-        'date': '16/01/2017'
-    }
-];
+    JsonFeries: Array<{}> = [
+        {
+            'libelle': 'Noël',
+            'date': '01/02/2017'
+        },
+    ];
 
-
- headersFormats = {
-            month: 'MMMM YYYY',
-            week: '[Semaine] w',
-            day: 'D',
-        };
-dateFrames = this.ParseResolveDataDayOff(this.JsonFeries);
+// gant configuration 
+    headersFormats = {
+        month: 'MMMM YYYY',
+        week: '[Semaine] w',
+        day: 'D',
+    };
+    dateFrames = this.ParseResolveDataDayOff(this.JsonFeries);
 
     timeFrames = {
         closed: {
-            magnet: false, // this will disable magnet snapping
             working: false // we don't work when it's closed
         }
     };
-   endtest = moment().format() + moment().daysInMonth();
     GetMonthBegin = moment();
     GetMonthEnd = moment().add(1, 'month').add(1, 'day');
 
     constructor(private ApiRestService: any) { }
-test() {
-   console.log('end test' + this.endtest);
-   console.log('getbegin' + this.GetMonthBegin);
-   console.log('getend' + this.GetMonthEnd);
-}
 
-ParseResolveDataDayOff(param: any) {
+    // converts  received data "Jourferies" from service REST to un object readable by gantt dateFrames  to show holiday in calendar 
+    ParseResolveDataDayOff(param: any) {
         console.log(' ParseResolveDataDayOff');
-        let dateframes: any = {        weekend: {
-            evaluator: function (date: any) { // a custom function evaluated for each day in the gantt
-                return date.isoWeekday() === 6 || date.isoWeekday() === 7;
-            },
-            targets: ['closed'] // use timeFrame named closed for saturday and sunday.
-        }};
+        let dateframes: any = {
+            weekend: {
+                evaluator: function (date: any) { // a custom function evaluated for each day in the gantt
+                    return date.isoWeekday() === 6 || date.isoWeekday() === 7;
+                },
+                targets: ['closed'] // use timeFrame named closed for saturday and sunday.
+            }
+        };
         angular.forEach(param, (dayoff, ind) => {
-           let _dayoff =  new Dayoff (moment(dayoff.date , 'DD/MM/YYYY'), ['closed']);
-           dateframes[1 + ind] = _dayoff;
+            let _dayoff = new Dayoff(moment(dayoff.date, 'DD/MM/YYYY'), ['closed']);
+            dateframes[1 + ind] = _dayoff;
         });
         return dateframes;
-}
+    }
+    // converts  received data  from service REST to un object "collaborateurs" readable by gantt calendar
     ParseResolveDataCoworker(resolve: any): any {
         if (!resolve) { return null; };
         let _coworkers = [];
@@ -90,11 +79,14 @@ ParseResolveDataDayOff(param: any) {
         return _coworkers;
     }
 
-    GetDataforGantt(param: string): void {
-        console.log('GetDataforGantt ' + param);
-        this.ApiRestService.GetdatafromREST(param)
+ // sent a query to receive data "collaborateurs" from Api REST 
+    CowrkerData(Routeparam: string): void {
+        console.log('GetDataforGantt ' + Routeparam);
+        this.ApiRestService.GetdatafromREST(Routeparam)
             .then((data): void => {
                 this.data = this.ParseResolveDataCoworker(data);
+                 console.log('Datastate true');
+                this.Datastate = true;
             });
     }
 
